@@ -1,1 +1,94 @@
 <h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+<style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+        }
+        .container{
+            width:500px;
+            margin:30px auto;
+            background:#fff;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+        h2{
+            text-align:center;
+            color:#333;
+        }
+        label{
+            font-weight:bold;
+        }
+        input, textarea, select{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:4px;
+        }
+        input[type=submit]{
+            background:#007BFF;
+            color:white;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+        input[type=submit]:hover{
+            background:#0056b3;
+        }
+</style>
+</head>
+<body>
+ 
+<div class="container">
+<h2>Student Registration Form</h2>
+ 
+    <form action="submit.php" method="post">
+ 
+        <label>Student Name</label>
+<input type="text" name="student_name" required>
+ 
+        <label>Email ID</label>
+<input type="email" name="email" required>
+ 
+        <label>Contact Number</label>
+<input type="tel" name="contact" pattern="[0-9]{10}" required>
+ 
+        <label>Address</label>
+<textarea name="address" rows="4" required></textarea>
+ 
+        <label>Course</label>
+<select name="course" required>
+<option value="">--Select Course--</option>
+<option>AWS with Devops</option>
+<option>Data Analytics</option>
+<option>Fullstack with Java</option>
+<option>Fullstack with Python</option>
+<option>MERN stack</option>
+<option>Data Analytics with Data Science</option>
+</select>
+ 
+        <label>Branch</label>
+<select name="branch" required>
+<option value="">--Select Branch--</option>
+<option>Shivajinagar</option>
+<option>Hadapsar</option>
+<option>PCMC</option>
+<option>Vashi</option>
+<option>Banglore</option>
+<option>Nagpur</option>
+</select>
+ 
+        <input type="submit" value="Register">
+ 
+    </form>
+</div>
+ 
+</body>
+</html>
